@@ -19,3 +19,25 @@ def add(a: int, b: int):
 @app.get("/multiply/{c}/{d}")
 def multiply(c: int, d: int):
     return {"product": c * d}
+
+# Endpoint to sum two numbers
+@app.get("/sum/{a}/{b}")
+def add(a: int, b: int):
+    return {"sum": a + b}
+
+# Endpoint to multiply two numbers
+@app.get("/multiply/{c}/{d}")
+def multiply(c: int, d: int):
+    return {"product": c * d}
+
+# New endpoint to subtract two numbers
+@app.get("/subtract/{x}/{y}")
+def subtract(x: int, y: int):
+    return {"difference": x - y}
+
+# New endpoint to divide two numbers
+@app.get("/divide/{m}/{n}")
+def divide(m: int, n: int):
+    if n == 0:
+        return {"error": "Cannot divide by zero"}
+    return {"quotient": m / n}
