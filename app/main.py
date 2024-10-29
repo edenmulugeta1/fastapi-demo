@@ -34,3 +34,8 @@ def divide(m: int, n: int):
     if n == 0:
         return {"error": "Cannot divide by zero"}
     return {"quotient": m / n}
+
+# New endpoint to square a number
+@app.get("/square/{a}")
+def square(a: int):
+    return {"square": a ** 2}
