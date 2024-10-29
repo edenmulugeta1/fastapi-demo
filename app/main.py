@@ -39,3 +39,7 @@ def divide(m: int, n: int):
 @app.get("/square/{a}")
 def square(a: int):
     return {"square": a ** 2}
+
+@app.get("/new-endpoint")
+def read_new_endpoint():
+    return {"message": "This is a new endpoint!"}
